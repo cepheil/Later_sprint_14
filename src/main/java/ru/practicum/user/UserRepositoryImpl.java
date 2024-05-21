@@ -9,14 +9,6 @@ import java.util.List;
 public class UserRepositoryImpl implements UserRepository {
     private final List<User> users = new ArrayList<>();
 
-    public UserRepositoryImpl() {
-        User fakeUser = new User();
-        fakeUser.setId(1L);
-        fakeUser.setEmail("mail1@example.com");
-        fakeUser.setName("Ivan Petrov #1");
-        users.add(fakeUser);
-    }
-
     @Override
     public List<User> findAll() {
         return users;
