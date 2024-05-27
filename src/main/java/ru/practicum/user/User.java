@@ -7,11 +7,9 @@ import lombok.ToString;
 
 import java.time.Instant;
 
-@Getter
-@Setter
-@ToString
 @Entity
-@Table(name = "users")
+@Table(name = "users", schema = "public")
+@Getter @Setter @ToString
 public class User {
 
     @Id
@@ -28,6 +26,9 @@ public class User {
 
     @Column(name = "registration_date")
     private Instant registrationDate = Instant.now();
+
+    @Enumerated(EnumType.STRING)
+    private UserState state;
 
     @Override
     public boolean equals(Object o) {
