@@ -28,6 +28,7 @@
         <mockito.version>5.12.0</mockito.version>
         <jsonassert.version>1.5.1</jsonassert.version>
         <json-path.version>2.9.0</json-path.version>
+        <jsoup.version>1.17.2</jsoup.version>
     </properties>
 
     <dependencies>
@@ -84,6 +85,12 @@
             <artifactId>querydsl-jpa</artifactId>
             <classifier>jakarta</classifier>
             <version>${querydsl-jpa.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.jsoup</groupId>
+            <artifactId>jsoup</artifactId>
+            <version>${jsoup.version}</version>
         </dependency>
 
         <!--   Test artifacts     -->
