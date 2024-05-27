@@ -34,6 +34,8 @@ public class PersistenceConfig {
 
     private Properties hibernateProperties() {
         Properties properties = new Properties();
+        properties.put("hibernate.dialect",
+                environment.getRequiredProperty("hibernate.dialect"));
         properties.put("hibernate.jdbc.time_zone",
                 environment.getRequiredProperty("hibernate.jdbc.time_zone"));
         properties.put("hibernate.show_sql",
