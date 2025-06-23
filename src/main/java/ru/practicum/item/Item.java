@@ -22,7 +22,7 @@ class Item {
     @Column
     private String url;
 
-    @ElementCollection
+    @ElementCollection(fetch = FetchType.EAGER)
     @CollectionTable(name="tags", joinColumns=@JoinColumn(name="item_id"))
     @Column(name="name")
     private Set<String> tags = new HashSet<>();
