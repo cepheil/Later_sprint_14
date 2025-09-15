@@ -18,6 +18,8 @@
         <lombok.version>1.18.32</lombok.version>
         <jackson-databind.version>2.17.1</jackson-databind.version>
         <logback-classic.version>1.5.6</logback-classic.version>
+        <postgresql.version>42.7.7</postgresql.version>
+        <spring-boot-starter-data-jpa.version>4.0.0-M2</spring-boot-starter-data-jpa.version>
     </properties>
 
     <dependencies>
@@ -50,5 +52,19 @@
             <artifactId>logback-classic</artifactId>
             <version>${logback-classic.version}</version>
         </dependency>
+
+        <dependency>
+            <groupId>org.postgresql</groupId>
+            <artifactId>postgresql</artifactId>
+            <version>${postgresql.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-jpa</artifactId>
+            <version>${spring-boot-starter-data-jpa.version}</version>
+        </dependency>
+
+
     </dependencies>
 </project>
